@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pharos Testnet Point Checker</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .telegram-link {
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    .telegram-link:hover {
+      transform: scale(1.05);
+      background-color: #229ED9;
+    }
+  </style>
 </head>
 <body class="bg-gray-900 text-white font-sans">
   <div class="min-h-screen flex flex-col items-center justify-start p-6">
@@ -17,8 +26,12 @@
       <div id="result" class="mt-6 text-white text-sm"></div>
     </div>
 
+    <a href="https://t.me/EZ_CRYPTOIN" target="_blank" class="telegram-link mt-6 inline-block bg-blue-600 text-white font-semibold py-2 px-6 rounded-full shadow-md hover:shadow-xl">
+      🚀 Join Channel Telegram for More Legitimate Airdrop
+    </a>
+
     <footer class="mt-10 text-gray-500 text-xs text-center">
-      Built for Pharos Testnet - Created License By EZCRYPTOIN
+      Built for Pharos Testnet — License by EZCRYPTOIN
     </footer>
   </div>
 
@@ -57,12 +70,13 @@
           </div>
         `;
       } catch (err) {
-        resultDiv.innerHTML = "server overload bang gagal mengambil data, silahkan mencoba beberapa saat lagi";
+        resultDiv.innerHTML = "Server Overload Bang, tunggu bentar seduh kopinya ntar balik lagi ye.";
       }
     }
   </script>
 </body>
 </html>
+
 
 
 
