@@ -23,7 +23,7 @@
   </div>
 
   <script>
-    const BASE_URL = "https://api.pharosnetwork.xyz/user/activity";
+    const BASE_URL = "/api/points";
 
     async function checkPoints() {
       const address = document.getElementById("wallet").value.trim();
@@ -37,9 +37,13 @@
 
       try {
         const res = await fetch(`${BASE_URL}?address=${address}`);
-        if (!res.ok) throw new Error("API Error");
-
         const data = await res.json();
+
+        if (data.error) {
+          resultDiv.innerHTML = "No data found or error from API.";
+          return;
+        }
+
         resultDiv.innerHTML = `
           <div class='mt-4'>
             <p><strong>Address:</strong> ${data.address || address}</p>
@@ -59,4 +63,5 @@
   </script>
 </body>
 </html>
+
 
